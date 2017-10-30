@@ -34,6 +34,43 @@ export function addTodo(text, complete) {
 // Mock todo data.
 addTodo('Taste JavaScript', true);
 addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
+addTodo('Buy a unicorn', false);
 
 export function getTodo(id) {
   return todosById[id];
