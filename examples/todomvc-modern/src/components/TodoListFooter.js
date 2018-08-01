@@ -25,7 +25,13 @@ class TodoListFooter extends React.Component {
     }
 
     return (
-      <footer className="footer">
+      <footer className="footer" style={{
+        position: 'fixed',
+        top: '0',
+        width: '100%',
+        background: 'white',
+        zIndex: 11,
+      }}>
         <span className="todo-count">
           <strong>{numTodos}</strong> {numTodos === 1 ? 'item' : 'items'} left
         </span>

@@ -2,6 +2,7 @@ import HashProtocol from 'farce/lib/HashProtocol';
 import queryMiddleware from 'farce/lib/queryMiddleware';
 import createFarceRouter from 'found/lib/createFarceRouter';
 import createRender from 'found/lib/createRender';
+import { ScrollManager } from 'found-scroll';
 import { Resolver } from 'found-relay';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -11,7 +12,6 @@ import { Environment, RecordSource, Store } from 'relay-runtime';
 import routes from './routes';
 import schema from './data/schema';
 
-import 'todomvc-common/base';
 import 'todomvc-common/base.css';
 import 'todomvc-app-css/index.css';
 
@@ -20,12 +20,24 @@ const environment = new Environment({
   store: new Store(new RecordSource()),
 });
 
+const render = createRender({
+  renderError: ({ error }) => (
+    <div>
+      {error.status === 404 ? 'Not found' : 'Error'}
+    </div>
+  ),
+});
+
 const Router = createFarceRouter({
   historyProtocol: new HashProtocol(),
   historyMiddlewares: [queryMiddleware],
   routeConfig: routes,
 
-  render: createRender({}),
+  render: renderArgs => (
+    <ScrollManager renderArgs={renderArgs}>
+      {render(renderArgs)}
+    </ScrollManager>
+  ),
 });
 
 const mountNode = document.createElement('div');

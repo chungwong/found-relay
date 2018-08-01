@@ -26,6 +26,7 @@ module.exports = (env, { mode }) => ({
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Relay • TodoMVC',
+      meta: {viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no'}
     }),
     new CopyWebpackPlugin(['src/assets']),
   ],

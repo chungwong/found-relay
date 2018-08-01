@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "npm run lint && npm run update-schema && npm run relay-compiler && npm run webpack",
+    "build": "npm run update-schema && npm run relay-compiler && npm run webpack",
     "lint": "eslint *.js src tools",
     "relay-compiler": "relay-compiler --src src --exclude 'data/**' --schema src/data/schema.graphql",
     "start": "npm run relay-compiler && cross-env BABEL_ENV=es webpack-dev-server --mode development --hot",
@@ -44,6 +44,7 @@
     "farce": "^0.2.6",
     "found": "^0.3.11",
     "found-relay": "^0.3.0-alpha.13",
+    "found-scroll": "^0.1.5",
     "graphql": "^0.13.2",
     "graphql-relay": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",

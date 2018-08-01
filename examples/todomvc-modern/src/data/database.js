@@ -35,6 +35,10 @@ export function addTodo(text, complete) {
 addTodo('Taste JavaScript', true);
 addTodo('Buy a unicorn', false);
 
+for (let i =0; i < 100; i++) {
+  addTodo(i, false);
+}
+
 export function getTodo(id) {
   return todosById[id];
 }
